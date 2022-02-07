@@ -1,0 +1,32 @@
+div {
+  background: rgb(0, 128, 0);
+  margin: 25px 50px;
+  padding: 25px 50px;
+}
+div.first {
+  background: rgba(0, 128, 0, 0.1);
+  margin: 25px;
+  padding: 25px;
+}
+div.second {
+  background: rgba(0, 128, 0, 0.3);
+  padding: 25px 50px 75px 100px;
+  margin: auto;
+}
+div.third {
+  background: rgba(0, 128, 0, 0.6);
+  margin-left: 100px;
+  padding: 25px 50px 75px;
+}
+h1.dotted {
+  border-style: dotted;
+}
+h1.mix {
+  border-style: dotted dashed solid double;
+}
+h1.inset {
+  border-style: inset;
+}
+h1.dashed {
+  border-style: dashed;
+}
