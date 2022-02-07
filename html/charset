@@ -1,0 +1,22 @@
+The ASCII Character Set
+ASCII uses the values from 0 to 31 (and 127) for control characters.
+ASCII uses the values from 32 to 126 for letters, digits, and symbols.
+ASCII does not use the values from 128 to 255.
+
+The UTF-8 Character Set
+UTF-8 is identical to ASCII for the values from 0 to 127.
+UTF-8 does not use the values from 128 to 159. 
+UTF-8 is identical to both ANSI and 8859-1 for the values from 160 to 255.
+UTF-8 continues from the value 256 with more than 10 000 different characters.
+
+Character	From Windows-1252	From UTF-8
+€		%80			%E2%82%AC
+£		%A3			%C2%A3
+©		%A9			%C2%A9
+®		%AE			%C2%AE
+À		%C0			%C3%80
+Á		%C1			%C3%81
+Â		%C2			%C3%82
+Ã		%C3			%C3%83
+Ä		%C4			%C3%84
+Å		%C5			%C3%85
