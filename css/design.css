@@ -1,0 +1,71 @@
+.overflow {
+    background-color: #eee;
+    width: 200px;
+    height: 50px;
+    border: 1px dotted black;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+* {
+    box-sizing: border-box;
+}
+.box {
+    float: left;
+    width: 33.33%;
+    padding: 50px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.nav {
+    background-color: yellow; 
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}  
+.nav li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+}
+div {
+    border: 3px solid #4CAF50;
+    padding: 5px;
+    text-align: center;
+}
+.img {
+    float: right;
+}  
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+div > p {
+    background-color: yellow;
+}
+div ~ p {
+    background-color: yellowgreen;
+}
+a:link {
+    color: red;
+}
+a:visited {
+    color: green;
+}
+a:hover {
+    color: hotpink;
+}
+a:active {
+    color: blue;
+}
+p:first-child {
+    color: blue;
+}
+p::first-letter {
+    color: #ff0000;
+    font-size: x-large;
+}
