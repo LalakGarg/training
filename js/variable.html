@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>JavaScript Variables</h1>
+        <p>Strings are written with quotes.</p>
+        <p>Numbers are written without quotes.</p>
+        <p id="demo"></p>
+        <p>You can declare many variables in one statement.</p>
+        <p>If you re-declare a JavaScript variable, it will not lose its value.</p>
+        <p id="demo1"></p>
+        <p>The underscore is treated as a letter in JavaScript names.</p>
+        <p id="demo2"></p>
+        <script>
+            const pi = 3.14;
+            let person = "John Doe";
+            let answer = 'Yes I am!';
+            document.getElementById("demo").innerHTML =
+            pi + "<br>" + person + "<br>" + answer;
+        </script>
+        <script>
+            let name= "John Doe", carName = "Volvo", price = 200;
+            document.getElementById("demo1").innerHTML = carName;
+        </script>
+        <script>
+            let _x = 2;
+            let _100 = 5;
+            document.getElementById("demo2").innerHTML = _x + _100;
+        </script>
+    </body>
+</html>
