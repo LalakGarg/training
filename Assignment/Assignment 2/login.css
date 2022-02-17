@@ -1,0 +1,103 @@
+div{
+    display: block;
+}
+.login-image{
+    background-image: url('images/login-bg.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    width: 40vh;
+    text-align: center;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.login-bar{
+    text-align: left;
+    float: right;
+    margin-top: 15px;
+}
+body{
+    background-color: #F3F6F9;
+    color: #6B7C93;
+    font-family: "Sofia Pro";
+    font-size: 14px;
+    font-weight: normal;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.para{
+    padding-right: 10px !important;
+}
+.upcase{
+    text-transform: uppercase;
+}
+.button1{
+    background-color: white;
+    border: 2px solid #008BFF;
+    color: #008BFF;
+    font-weight: 600;
+    padding: 8px 14px 10px;
+    border-radius: 4px;
+}
+.row{
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.container-login{
+    margin-top: 90px;
+    margin-left: 200px;
+    color: #014887;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.box{
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    box-shadow: 0 0 4px 0 rgb(0 0 0 / 10%);
+    color: #6B7C93;
+    border: none;
+    font-size: 14px;
+    text-align: left;
+}
+label{
+    display: inline-block;
+    margin-bottom: 5px;
+    color: #014887;
+    font-weight: bold;
+}
+.form-group{
+    margin-bottom: 15px;
+}
+.form-control{
+    border: 2px solid #DDE9F5;
+    line-height: 34px;
+    height: 40px;
+    color: #6B7C93;
+    display: block;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.pull-right{
+    float: right !important;
+}
+a{
+    color: #008BFF;
+    text-decoration: none;
+}
+.link{
+    margin-top: 15px;
+}
+.owner-login{
+    color: #008BFF;
+    cursor: pointer;
+}
+.form-title{
+    font-weight: bolder;
+}
