@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function myFunction() {
+              document.getElementById("demo").innerHTML = "Paragraph changed.";
+            }
+        </script>
+    </head>
+    <body>
+        <h2>What Can JavaScript Do?</h2>
+        <p id="demo">JavaScript can hide HTML elements.</p>
+        <button type="button" onclick="document.getElementById('demo').style.display='none'">Click Me!</button>
+        <p>JavaScript can show hidden HTML elements.</p>
+        <p id="demo" style="display:none">Hello JavaScript!</p>
+        <button type="button" onclick="document.getElementById('demo').style.display='block'">Click Me!</button>
+        <h2>Demo JavaScript in Head</h2>
+        <button type="button" onclick="myFunction()">Try it</button>
+        <h2>Demo External JavaScript</h2>
+        <p id="demo">A Paragraph.</p>
+        <button type="button" onclick="myFunction()">Try it</button>
+        <p>This example links to "myScript.js".</p>
+        <p>(myFunction is stored in "myScript.js")</p>
+        <script src="intro.js"></script>
+    </body>
+</html>
