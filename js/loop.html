@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="col-md-6">
+            <h2>JavaScript For Loop</h2>
+        <p id="demo"></p>
+        <script>
+            let text = "";
+            for (let i = 0; i < 5; i++) {
+                text += "The number is " + i + "<br>";
+            }
+            document.getElementById("demo").innerHTML = text;
+        </script>
+        <p id="demo1"></p>
+        <script>
+        const cars = ["BMW", "Volvo", "Saab", "Ford"];
+        let i = 0;
+        let len = cars.length;
+        let text1 = "";
+        for (; i < len; ) {
+          text1 += cars[i] + "<br>";
+          i++;
+        }
+        document.getElementById("demo1").innerHTML = text1;
+        </script>
+        <h2>JavaScript For In</h2>
+        <p>The for in statement can loops over array values:</p>
+        <p id="demo2"></p>
+        <script>
+        const numbers = [45, 4, 9, 16, 25];
+        let txt = "";
+        for (let x in numbers) {
+          txt += numbers[x] + "<br>"; 
+        }
+        document.getElementById("demo2").innerHTML = txt;
+        </script>
+        <h2>JavaScript Array.forEach()</h2>
+        <p>Calls a function once for each array element.</p>
+        <p id="demo3"></p>
+        <script>
+        const numbers1 = [45, 4, 9, 16, 25];
+        let txt1 = "";
+        numbers1.forEach(myFunction);
+        document.getElementById("demo3").innerHTML = txt1;
+        function myFunction(value) {
+          txt1 += value + "<br>"; 
+        }
+        </script>
+        <h2>JavaScript For Of Loop</h2>
+        <p>The for of statement loops through the values of an iterable object.</p>
+        <p id="demo4"></p>
+        <script>
+        let language = "JavaScript";
+        let text2 = "";
+        for (let x of language) {
+          text2 += x + "<br>";
+        }
+        document.getElementById("demo4").innerHTML = text2;
+        </script>
+        </div>
+        <div class="col-md-6">
+            <h2>JavaScript Do While Loop</h2>
+            <p id="demo5"></p>
+            <script>
+                let text3 = ""
+                let j = 0;
+                do {
+                    text3 += "<br>The number is " + j;
+                    j++;
+                }
+                while (j < 10);
+                document.getElementById("demo5").innerHTML = text3;
+            </script>
+            <p id="demo6"></p>
+            <script>
+            const cars1 = ["BMW", "Volvo", "Saab", "Ford"];            
+            let k = 0;
+            let text4 = "";
+            while (cars1[k]) {
+              text4 += cars1[k] + "<br>";
+              k++;
+            }            
+            document.getElementById("demo6").innerHTML = text4;
+            </script>
+            
+        </div>
+    </body>
+</html>

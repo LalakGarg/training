@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>JavaScript Sets</h2>
+        <p>Add values to a Set:</p>
+        <p id="demo"></p>
+        <script>
+            // Create a Set
+            const letters = new Set();
+            // Add Values to the Set
+            letters.add("a");
+            letters.add("b");
+            letters.add("c");
+            // Display set.size
+            document.getElementById("demo").innerHTML = letters.size;
+        </script>
+        <p>forEach() calls a function for each element:</p>
+        <p id="demo1"></p>        
+        <script>
+        // Create a Set
+        const letters1 = new Set(["a","b","c"]);
+        // List all Elements
+        let text = "";
+        letters1.forEach (function(value) {
+          text += value + "<br>";
+        })        
+        document.getElementById("demo1").innerHTML = text;
+        </script>
+        <p>Iterating Set values:</p>
+        <p id="demo2"></p>
+        <script>
+        // Create a Set
+        const letters2 = new Set(["a","b","c"]);
+        // List all Elements
+        let text1 = "";
+        for (const x of letters2.values()) {
+          text1 += x + "<br>";
+        }
+        document.getElementById("demo2").innerHTML = text1;
+        </script>
+        <h2>JavaScript Map Objects</h2>
+        <p>Creating a Map from an Array:</p>        
+        <p id="demo3"></p>        
+        <script>
+        // Create a Map
+        const fruits = new Map([
+          ["apples", 500],
+          ["bananas", 300],
+          ["oranges", 200]
+        ]);        
+        document.getElementById("demo3").innerHTML = fruits.get("apples");
+        </script>
+        <p>Using Map.get():</p>
+        <p id="demo4"></p>        
+        <script>
+        // Create a Map
+        const fruits1 = new Map([
+          ["apples", 500],
+          ["bananas", 300],
+          ["oranges", 200]
+        ]);        
+        document.getElementById("demo4").innerHTML = fruits1.get("apples");
+        </script>
+        <p>Deleting Map elements:</p>
+        <p id="demo5"></p>        
+        <script>
+        // Create a Map
+        const fruits2 = new Map([
+          ["apples", 500],
+          ["bananas", 300],
+          ["oranges", 200]
+        ]);        
+        // Delete an Element
+        fruits2.delete("apples");        
+        document.getElementById("demo5").innerHTML = fruits2.size;
+        </script>
+        <p>Using Map.has():</p>
+        <p id="demo6"></p>        
+        <script>
+        // Create a Map
+        const fruits3 = new Map([
+          ["apples", 500],
+          ["bananas", 300],
+          ["oranges", 200]
+        ]);        
+        // Delete an Element
+        fruits3.delete("apples");
+        document.getElementById("demo6").innerHTML = fruits3.has("apples");
+        </script>
+        <p>Using Map.entries():</p>
+        <p id="demo7"></p>        
+        <script>
+        // Create a Map
+        const fruits4 = new Map([
+          ["apples", 500],
+          ["bananas", 300],
+          ["oranges", 200]
+        ]);        
+        let text2 = "";
+        for (const x of fruits4.entries()) {
+          text2 += x + "<br>";
+        }        
+        document.getElementById("demo7").innerHTML = text2;
+        </script>
+    </body>
+</html>

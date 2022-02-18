@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>JavaScript Booleans</h2>
+        <p>Display the value of 10 > 9:</p>
+        <p id="demo"></p>
+        <script>
+            document.getElementById("demo").innerHTML = 10 > 9;
+        </script>
+        <p id="demo2"></p>
+        <script>
+        document.getElementById("demo2").innerHTML =
+        "100 is " + Boolean(100) + "<br>" +
+        "3.14 is " + Boolean(3.14) + "<br>" +
+        "-15 is " + Boolean(-15) + "<br>" +
+        "Any (not empty) string is " + Boolean("Hello") + "<br>" +
+        "Even the string 'false' is " + Boolean('false') + "<br>" +
+        "Any expression (except zero) is " + Boolean(1 + 7 + 3.14);
+        </script>
+        <p>Display the Boolean value of NaN:</p>
+        <p id="demo3"></p>
+        <script>
+        let x = 10 / "Hello";
+        document.getElementById("demo3").innerHTML = Boolean(x);
+        </script>
+        <p>Booleans and Boolean objects cannot be safely compared.</p>
+        <p id="demo4"></p>
+        <script>
+        const x1 = new Boolean(false);
+        const y1 = new Boolean(false);
+        document.getElementById("demo4").innerHTML = (x1===y1);
+        </script>
+        <h2>JavaScript Comparisons</h2>
+        <p>Input your age and click the button:</p>
+        <input id="age" value="18" />
+        <button onclick="myFunction()">Try it</button>
+        <p id="demo5"></p>
+        <script>
+        function myFunction() {
+          let voteable;
+          let age = Number(document.getElementById("age").value);
+          if (isNaN(age)) {
+            voteable = "Input is not a number";
+          } else {
+            voteable = (age < 18) ? "Too young" : "Old enough";
+          }
+          document.getElementById("demo5").innerHTML = voteable + " to vote";
+        }
+        </script>
+        <h2>JavaScript if .. else</h2>
+        <p>A time-based greeting:</p>
+        <p id="demo6">Good Evening!</p>
+        <script>
+        const time = new Date().getHours();
+        let greeting;
+        if (time < 10) {
+            greeting = "Good morning";
+            } else if (time < 20) {
+                greeting = "Good day";
+            } else {
+                greeting = "Good evening";
+            }
+            document.getElementById("demo6").innerHTML = greeting;
+        </script>
+    </body>
+</html>

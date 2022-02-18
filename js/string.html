@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="col-md-6">
+            <h2>JavaScript Strings</h2>
+        <p>You can use quote inside a string, as long as they don't match the quote surrounding the string.</p>
+        <p id="demo"></p>
+        <script>
+            let answer1 = "It's alright";
+            let answer2 = "He is called 'Johnny'";
+            let answer3 = 'He is called "Johnny"';
+            document.getElementById("demo").innerHTML = answer1 + "<br>" + answer2 + "<br>" + answer3;
+        </script>
+        <p>The length property returns the length of a string:</p>
+        <p id="demo1"></p>
+        <script>
+            let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            document.getElementById("demo1").innerHTML = text.length;
+        </script>
+        <p>The escape sequence \" inserts a double or single quote in a string.</p>
+        <p id="demo2"></p>
+        <script>
+            let text1 = "We are the so-called \"Vikings\" from the north.";
+            let text2 = 'It\'s alright';
+            document.getElementById("demo2").innerHTML = text1 + "<br>" + text2;
+        </script>
+        <p>The escape sequence \\ inserts a backslash in a string.</p>
+        <p id="demo3"></p>
+        <script>
+            let text3 = "The character \\ is called backslash."
+            document.getElementById("demo3").innerHTML = text3;
+        </script>
+        <p>You can break a code line within a text string with a backslash.</p>
+        <p id="demo4"></p>
+        <p id="demo5">You cannot break a code line with a \ backslash.</p>
+        <script>
+            document.getElementById("demo4").innerHTML = "Hello \
+            Dolly!";
+        </script>
+        <script>
+            document.getElementById("demo5").innerHTML = \"Hello Dolly.";
+        </script>
+        <h2>Never Create Strings as Objects</h2>
+        <p>Strings and objects cannot be safely compared.</p>
+        <p id="demo6"></p>
+        <script>
+            let x = "John";        // x is a string
+            let y = new String("John");  // y is an object
+            document.getElementById("demo6").innerHTML = (x===y);
+        </script>
+        <h2>JavaScript String Methods</h2>
+        <p>The slice() method extract a part of a string and returns the extracted parts in a new string:</p>
+        <p>The substring() method extract a part of a string and returns the extracted parts in a new string:</p>
+        <p>The substr() method extract a part of a string and returns the extracted parts in a new string:</p>
+        <p id="demo7"></p>
+        <script>
+            let str = "Appke, Banana, Kiwi";
+            let part1 = str.slice(7,13);
+            let part2 = str.slice(-12,-6);
+            let part3 = str.slice(7);
+            let part4 = str.slice(-12);
+            let part5 = str.substring(7,13);
+            let part6 = str.substr(7,6);
+            let part7 = str.substr(7);
+            let part8 = str.substr(-4);
+            document.getElementById("demo7").innerHTML = part1 + "<br>" + part2 + "<br>" + part3 + "<br>" + part4 + "<br>" + part5 + "<br>" + part6 + "<br>" + part7 + "<br>" + part8;
+        </script>
+        </div>
+        <div class="col-md-6">
+            <h2>JavaScript String Methods</h2>
+            <p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+            <button onclick="myFunction()">Try it</button>
+            <p id="demo8">Please visit Microsoft!</p>
+            <script>
+                function myFunction(){
+                    let text4 = document.getElementById("demo8").innerHTML;
+                    document.getElementById("demo8").innerHTML = text4.replace(/Microsoft/i, "W3Schools");
+                }
+            </script>
+            <h2>JavaScript String Methods</h2>
+            <p>The lastIndexOf() method returns the position of the last occurrence of a specified text:</p>
+            <p id="demo9"></p>
+            <script>
+                let str1 = "Please locate where 'locate' occurs!";
+                document.getElementById("demo9").innerHTML = str1.lastIndexOf("locate");
+            </script>
+            <h2>JavaScript Strings</h2>
+            <p>Check if a string starts with "Hello":</p>            
+            <p id="demo10"></p>
+            <script>
+                let text5 = "Hello world, welcome to the universe.";
+                document.getElementById("demo10").innerHTML = text5.startsWith("Hello");
+            </script>
+            <h2>JavaScript Template Literals</h2>
+            <p>Template literals allows variables in strings:</p>
+            <p id="demo11"></p>
+            <script>
+            let firstName = "John";
+            let lastName = "Doe";
+            let text6 = `Welcome ${firstName}, ${lastName}!`;
+            document.getElementById("demo11").innerHTML = text6;
+            </script>
+        </div>
+    </body>
+</html>

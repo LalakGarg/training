@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="col-md-6">
+            <h2>JavaScript Arrays</h2>
+        <p>The length property returns the length of an array.</p>
+        <p id="demo"></p>
+        <script>
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demo").innerHTML = fruits.length + "<br>" + Array.isArray(fruits);
+        </script>
+        <p>Array.forEach() calls a function for each array element.</p>
+        <p id="demo1"></p>
+        <script>
+        const fruit = ["Banana", "Orange", "Apple", "Mango"];
+        let text = "<ul>";
+        fruit.forEach(myFunction);
+        text += "</ul>";
+        document.getElementById("demo1").innerHTML = text;
+        function myFunction(value) {
+          text += "<li>" + value + "</li>";
+        } 
+        </script>
+        <p>Create an Array with three elements.</p>
+        <p id="demo2"></p>      
+        <script>
+        var points = new Array(40, 100, 1);
+        document.getElementById("demo2").innerHTML = points;  
+        </script>
+        <h2>JavaScript Array Methods</h2> 
+        <h2>join()</h2> 
+        <p>The join() method joins array elements into a string.</p>
+        <p>It this example we have used " * " as a separator between the elements:</p>
+        <p id="demo3"></p>
+        <script>
+        const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo3").innerHTML = fruits1.join(" * ");
+        </script>
+        <h2>unshift()</h2>
+        <p>The unshift() method adds new elements to the beginning of an array:</p>
+        <p id="demo4"></p>
+        <p id="demo5"></p>
+        <script>
+        const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo4").innerHTML = fruits2;
+        fruits2.unshift("Lemon");
+        document.getElementById("demo5").innerHTML = fruits2;
+        </script>
+        <h2>JavaScript Array Sort</h2>
+        <p>The reverse() method reverses the elements in an array.</p>
+        <p>By combining sort() and reverse() you can sort an array in descending order:</p>    
+        <p id="demo6"></p>
+        <p id="demo7"></p>
+        <script>
+        // Create and display an array:
+        const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo6").innerHTML = fruits3;
+        // First sort the array
+        fruits3.sort();
+        // Then reverse it:
+        fruits3.reverse();
+        document.getElementById("demo7").innerHTML = fruits3;
+        </script>
+        <p>The highest number is <span id="demo8"></span>.</p>
+        <script>
+        const point = [40, 100, 1, 5, 25, 10];
+        document.getElementById("demo8").innerHTML = myArrayMax(point);
+        function myArrayMax(arr) {
+          return Math.max.apply(null, arr);
+        }
+        </script>
+        <p>Sort car objects on age:</p>
+        <p id="demo9"></p>       
+        <script>
+        const cars = [
+          {type:"Volvo", year:2016},
+          {type:"Saab", year:2001},
+          {type:"BMW", year:2010}
+        ];
+        displayCars();
+        cars.sort(function(a, b){return a.year - b.year});
+        displayCars();
+        function displayCars() {
+          document.getElementById("demo9").innerHTML =
+          cars[0].type + " " + cars[0].year + "<br>" +
+          cars[1].type + " " + cars[1].year + "<br>" +
+          cars[2].type + " " + cars[2].year;
+        }
+        </script>
+        </div>
+        <div class="col-md-6">
+            <h2>JavaScript Array.map()</h2>
+            <p>Creates a new array by performing a function on each array element.</p>
+            <p id="demo10"></p>
+            <script>
+                const numbers1 = [45, 4, 9, 16, 25];
+                const numbers2 = numbers1.map(myFunction);
+                document.getElementById("demo10").innerHTML = numbers2;
+                function myFunction(value, index, array) {
+                  return value * 2;
+                }
+            </script>
+            <h2>JavaScript Array.filter()</h2>
+            <p>Creates a new array with all array elements that passes a test.</p>
+            <p id="demo11"></p>
+            <script>
+            const numbers3 = [45, 4, 9, 16, 25];
+            const over18 = numbers3.filter(myFunction);
+            document.getElementById("demo11").innerHTML = over18;
+            function myFunction(value) {
+              return value > 18;
+            }
+            </script>
+            <h2>JavaScript Array.reduce()</h2>
+            <p>This example finds the sum of all numbers in an array:</p>
+            <p id="demo12"></p>
+            <script>
+            const numbers4 = [45, 4, 9, 16, 25];
+            let sum = numbers4.reduce(myFunction, 100);
+            document.getElementById("demo12").innerHTML = "The sum is " + sum;
+            function myFunction(total, value) {
+              return total + value;
+            }
+            </script>
+            <h2>JavaScript Arrays</h2>
+            <p>The Array.from() method returns an Array object from any object with a length property or any iterable object.</p>           
+            <p id="demo13"></p>
+            <script>
+            const myArr = Array.from("ABCDEFG");
+            document.getElementById("demo13").innerHTML = myArr;
+            </script>
+            <h2>JavaScript const</h2>
+            <p>Declaring a constant array does NOT make the elements unchangeble:</p>            
+            <p id="demo14"></p>
+            <script>
+            // Create an Array:
+            const cars1 = ["Saab", "Volvo", "BMW"];
+            // Change an element:
+            cars1[0] = "Toyota";
+            // Add an element:
+            cars1.push("Audi");
+            // Display the Array:
+            document.getElementById("demo14").innerHTML = cars1; 
+            </script>
+            <h2>Declaring an Array Using const</h2>
+            <p id="demo15"></p>
+            <script>
+            const cars2 = ["Saab", "Volvo", "BMW"];
+            // Here cars[0] is "Saab"
+            {  
+              const cars2 = ["Toyota", "Volvo", "BMW"]; 
+              // Here cars[0] is "Toyota"
+            }
+            // Here cars[0] is "Saab"
+            document.getElementById("demo15").innerHTML = cars2[0];
+            </script>
+        </div>
+    </body>
+</html>

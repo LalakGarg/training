@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="col-md-6">
+            <h2>JavaScript new Date()</h2>
+            <p>JavaScript counts months from 0 to 11.</p>
+            <p>Specifying a month higher than 11, will not result in an error but add the overflow to the next year:</p>
+            <p id="demo"></p>
+            <script>
+                const d = new Date(2018, 15, 24, 10, 33, 30, 0);
+                document.getElementById("demo").innerHTML = d;
+            </script>
+            <p>One digit years will be interpreted as 19xx:</p>
+            <p id="demo1"></p>
+            <script>
+            const d1 = new Date(9, 11, 24);
+            document.getElementById("demo1").innerHTML = d1;
+            </script>
+            <h2>JavaScript toString()</h2>
+            <p>The toString() method converts a date to a string:</p>
+            <p id="demo2"></p>
+            <script>
+            const d2 = new Date();
+            document.getElementById("demo2").innerHTML = d2.toString();
+            </script>
+            <h2>JavaScript Date()</h2>
+            <p>The toUTCString() method converts a date to a UTC string (a date display standard):</p>
+            <p id="demo3"></p>
+            <script>
+            const d3 = new Date();
+            document.getElementById("demo3").innerHTML = d3.toUTCString();
+            </script>
+            <h2>JavaScript ISO Dates</h2>
+            <p id="demo4"></p>            
+            <script>
+            const d4 = new Date("2015-03-25");
+            document.getElementById("demo4").innerHTML = d4;
+            </script>
+            <h2>JavaScript Date.parse()</h2>
+            <p>Date.parse(string) returns milliseconds.</p>
+            <p>You can use the return value to convert the string to a date object:</p>
+            <p id="demo5"></p>
+            <script>
+            let msec = Date.parse("March 21, 2012");
+            const d5 = new Date(msec);
+            document.getElementById("demo5").innerHTML = d5;
+            </script>
+            <h2>JavaScript new Date()</h2>
+            <p id="demo6"></p>
+            <script>
+            const d6 = new Date("January 25 2015");
+            document.getElementById("demo6").innerHTML = d6;
+            </script>
+            <p id="demo7"></p>
+            <script>
+            const d7 = new Date("03/25/2015");
+            document.getElementById("demo7").innerHTML = d7;
+            </script>
+            <h2>JavaScript getFullYear()</h2>
+            <p>The getFullYear() method returns the full year of a date:</p>
+            <p id="demo8"></p>
+            <script>
+            const d8 = new Date();
+            document.getElementById("demo8").innerHTML = d8.getFullYear();
+            </script>
+        </div>
+        <div class="col-md-6">
+            <h2>JavaScript getTime()</h2>
+            <p>The internal clock in JavaScript counts from midnight January 1, 1970.</p>
+            <p>The getTime() function returns the number of milliseconds since then:</p>
+            <p id="demo9"></p>
+            <script>
+                const d9 = new Date();
+                document.getElementById("demo9").innerHTML = d9.getTime();
+            </script>
+            <h2>JavaScript getDay()</h2>
+            <p>The getDay() method returns the weekday as a number:</p>
+            <p id="demo10"></p>
+            <script>
+            const d10 = new Date();
+            document.getElementById("demo10").innerHTML = d10.getDay();
+            </script>
+            <h2>JavaScript getDay()</h2>
+            <p>The getDay() method returns the weekday as a number.</p>
+            <p>You can use an array to display the name of the weekday:</p>
+            <p id="demo11"></p>
+            <script>
+            const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+            const d11 = new Date();
+            let day = days[d11.getDay()];
+            document.getElementById("demo11").innerHTML = day;
+            </script>
+            <h2>JavaScript setFullYear()</h2>
+            <p>The setFullYear() method can optionally set month and day.</p>
+            <p>Please note that month counts from 0. December is month 11:</p>
+            <p id="demo12"></p>
+            <script>
+            const d12 = new Date();
+            d12.setFullYear(2020, 11, 3);
+            document.getElementById("demo12").innerHTML = d12;
+            </script>
+            <p id="demo13"></p>
+            <script>
+            let text;
+            const today = new Date();
+            const someday = new Date();
+            someday.setFullYear(2100, 0, 14);
+            if (someday > today) {
+              text = "Today is before January 14, 2100.";
+            } else {
+              text = "Today is after January 14, 2100.";
+            }
+            document.getElementById("demo13").innerHTML = text;
+            </script>
+        </div>
+    </body>
+</html>
