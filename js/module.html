@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>JavaScript Modules</h1>
+        <p id="demo"></p>
+        <script  type="module">
+  
+        import message from "../message.js";
+        document.getElementById("demo").innerHTML = message();
+        </script>
+
+        <h2>Create Object from JSON String</h2>
+        <p id="demo1"></p>
+        <script>
+        let text = '{"employees":[' +
+        '{"firstName":"John","lastName":"Doe" },' +
+        '{"firstName":"Anna","lastName":"Smith" },' +
+        '{"firstName":"Peter","lastName":"Jones" }]}';
+        const obj = JSON.parse(text);
+        document.getElementById("demo1").innerHTML =
+        obj.employees[1].firstName + " " + obj.employees[1].lastName;
+        </script>
+    </body>
+</html>
