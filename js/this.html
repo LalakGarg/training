@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <bod>
+        <h1>The JavaScript <i>this</i> Keyword</h1>
+        <p>In this example, <b>this</b> refers to the <b>person</b> object.</p>
+        <p>Because <b>fullName</b> is a method of the person object.</p>
+        <p id="demo"></p>
+        <script>
+            const person ={
+                firstName: "John",
+                lastName: "Doe",
+                id: 5566,
+                fullName : function(){
+                    return this.firstName + " " + this.lastName;
+                }
+            };
+            document.getElementById("demo").innerHTML = person.fullName();
+        </script>
+        <p>In this example, <b>this</b> refers to the window object:</p>
+        <p id="demo1"></p>        
+        <script>
+        let x = this;
+        document.getElementById("demo1").innerHTML = x;
+        </script>
+        <p>In this example, <b>this</b> refers to the the window object:</p>
+        <p id="demo2"></p>        
+        <script>
+        document.getElementById("demo2").innerHTML = myFunction();
+        
+        function myFunction() {
+          return this;
+        }
+        </script>
+        <p>In a function, by default, <b>this</b> refers to the global object.</p>
+        <p>Strict mode does not allow default binding, so <b>this</b> is:</p>
+        <p id="demo3"></p>        
+        <script>
+        "use strict";
+        document.getElementById("demo3").innerHTML = myFunction();
+        
+        function myFunction() {
+          return this;
+        }
+        </script>
+        <button onclick="this.style.display='none'">Click to Remove Me!</button>
+        <p>In this example, <b>this</b> refers to the <b>person object</b>.</p>
+        <p id="demo4"></p>
+        <script>
+        // Create an object:
+        const person1 = {
+        FirstName  : "John",
+        LastName   : "Doe",
+        ID     : 5566,
+        myFunction : function() {
+            return this;
+        }
+        };
+        // Display data from the object:
+        document.getElementById("demo4").innerHTML = person1.myFunction();
+        </script>
+    </bod>
+</html>
