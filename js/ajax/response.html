@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>The XMLHttpRequest Object</h2>
+        <p>The getAllResponseHeaders() function returns all the header information of a resource, like length, server-type, content-type, last-modified, etc:</p>
+        <p id="demo"></p>
+        <script>
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                document.getElementById("demo").innerHTML =
+                this.getAllResponseHeaders();
+            }
+            xhttp.open("GET", "ajax_info.txt");
+            xhttp.send();
+        </script>
+        <p>The getResponseHeader() function is used to return specific header information from a resource, like length, server-type, content-type, last-modified, etc:</p>
+
+        <p>Last modified: <span id="demo1"></span></p>
+        
+        <script>
+        const xhttp1=new XMLHttpRequest();
+        xhttp1.onload = function() {
+          document.getElementById("demo1").innerHTML =
+          this.getResponseHeader("Last-Modified");
+        }
+        xhttp1.open("GET", "ajax_info.txt");
+        xhttp1.send();
+        </script>
+    </body>
+</html>
